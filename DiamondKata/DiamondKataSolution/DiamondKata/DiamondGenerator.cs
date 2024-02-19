@@ -17,16 +17,27 @@ namespace DiamondKata
             int position = c;
             int diff = position - positionA;
 
-            var middleLine = diff > 0 ? c + new string(' ', diff) + c : c.ToString();
-
-
-            var sb = new StringBuilder(middleLine);
-            for (int i = 0; i < diff; i++)
+            if (diff == 0 )
             {
-                var line = ((char)((byte)c - i)) + new string('_', diff) + ((char)((byte)c - i))+ Environment.NewLine;
+                response.Add("A");
+                return response; ;
+            }
+            var middleLine = c + new string(' ', diff) + c;
+            int len = middleLine.Length;
+
+            var sb = new StringBuilder(middleLine+Environment.NewLine);
+
+            for (int i = 1; i <= diff; i++)
+            {                
+                var sb2 = new StringBuilder( new string(' ', len));
+                char letter = (char)(position - i);
+                sb2[i] = letter;
+                sb2[^(i+1)] = letter;
+
+                var line = sb2.ToString() + Environment.NewLine;
+
                 sb.Insert(0, line);
-                sb.Append(line);
-                
+                sb.Append(line);                
             }
             response = sb.ToString().Split(Environment.NewLine).ToList();
             
