@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,26 +15,21 @@ namespace DiamondKata
             var response = new List<string>();
             int positionA = 65;
             int position = c;
+            int diff = position - positionA;
 
-            var sb = new StringBuilder();
+            var middleLine = diff > 0 ? c + new string(' ', diff) + c : c.ToString();
+
+
+            var sb = new StringBuilder(middleLine);
+            for (int i = 0; i < diff; i++)
+            {
+                var line = ((char)((byte)c - i)) + new string('_', diff) + ((char)((byte)c - i))+ Environment.NewLine;
+                sb.Insert(0, line);
+                sb.Append(line);
+                
+            }
+            response = sb.ToString().Split(Environment.NewLine).ToList();
             
-            for (int i = positionA; i <= position; i++)
-            {
-                var str = new string(' ', i);
-                str += (char)positionA + i;
-                str += new string(' ', i);
-                response.Add(str);                
-            }
-
-            for (int i = position-1; i > positionA; i--)
-            {
-                var str = new string(' ', i);
-                str += (char)positionA + i;
-                str += new string(' ', i);
-                response.Add(str);
-            }
-
-           
             return response;  
         }
     }

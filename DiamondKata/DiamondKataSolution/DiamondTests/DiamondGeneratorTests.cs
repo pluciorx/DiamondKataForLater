@@ -48,7 +48,7 @@ namespace DiamondTests
         public void ShouldReturnDiamond()
         {
             var sut = new DiamondGenerator();
-            var resut = sut.GetDiamond('B');
+            var resut = sut.GetDiamond('A');
 
             foreach (var item in resut)
                 Console.WriteLine(item);
