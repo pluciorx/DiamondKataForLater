@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiamondKata")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d7b572c4303d471a4f749817b8517dea661eb8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiamondKata")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiamondKata")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

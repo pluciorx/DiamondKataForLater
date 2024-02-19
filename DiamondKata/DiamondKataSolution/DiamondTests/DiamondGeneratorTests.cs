@@ -6,28 +6,54 @@ namespace DiamondTests
     public class DiamondGeneratorTests
     {
         [TestMethod]
-        public void SholdReturnFalseForInvalidInput()
+        public void ShouldReturn1Line()
         {
-            var sut = new InputValidator();
-            var result = sut.IsValidInput("3");
-            var result2 = sut.IsValidInput("}");
-            var result3 = sut.IsValidInput("Ab");
-            var result4 = sut.IsValidInput("G");
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('A');
+            
+            Assert.AreEqual(1, resut.Count());
+        }
 
-            Assert.IsFalse(result);
-            Assert.IsFalse(result2);
-            Assert.IsFalse(result3);
+        public void ShouldReturn6Lines()
+        {
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('C');
+
+            Assert.AreEqual(5, resut.Count());
         }
 
         [TestMethod]
-        public void SholdReturnTrueForValirInput()
+        public void ShouldReturnLineWithOnlyA()
         {
-            var sut = new InputValidator();
-            var result = sut.IsValidInput("A");
-            var result2 = sut.IsValidInput("Z");
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('A');
 
-            Assert.IsTrue(result && result2);
-            
+            Assert.AreEqual("A", resut[0]);
+
         }
+
+        [TestMethod]
+        public void ShouldReturnLineWithB()
+        {
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('B');
+
+            Assert.AreEqual(" A ", resut[0]);
+            Assert.AreEqual("B B", resut[1]);
+            Assert.AreEqual(" A ", resut[0]);
+
+        }
+
+        [TestMethod]
+        public void ShouldReturnDiamond()
+        {
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('B');
+
+            foreach (var item in resut)
+                Console.WriteLine(item);
+
+        }
+
     }
 }
