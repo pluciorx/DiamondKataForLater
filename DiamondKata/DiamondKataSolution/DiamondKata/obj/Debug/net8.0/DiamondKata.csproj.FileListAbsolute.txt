@@ -1,0 +1,15 @@
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\bin\Debug\net8.0\DiamondKata.exe
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\bin\Debug\net8.0\DiamondKata.deps.json
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\bin\Debug\net8.0\DiamondKata.runtimeconfig.json
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\bin\Debug\net8.0\DiamondKata.dll
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\bin\Debug\net8.0\DiamondKata.pdb
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.AssemblyInfoInputs.cache
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.AssemblyInfo.cs
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.csproj.CoreCompileInputs.cache
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.sourcelink.json
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.dll
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\refint\DiamondKata.dll
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.pdb
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\DiamondKata.genruntimeconfig.cache
+D:\Git\DiamondKataForLater\DiamondCataSolution\DiamondKata\obj\Debug\net8.0\ref\DiamondKata.dll
