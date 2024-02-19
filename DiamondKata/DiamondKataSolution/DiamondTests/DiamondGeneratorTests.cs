@@ -45,6 +45,18 @@ namespace DiamondTests
         }
 
         [TestMethod]
+        public void ShouldReturnLineWithb()
+        {
+            var sut = new DiamondGenerator();
+            var resut = sut.GetDiamond('b');
+
+            Assert.AreEqual(" a ", resut[0]);
+            Assert.AreEqual("b b", resut[1]);
+            Assert.AreEqual(" a ", resut[2]);
+
+        }
+
+        [TestMethod]
         public void ShouldReturnDiamondForAnyLetter()
         {
             var sut = new DiamondGenerator();
@@ -59,13 +71,19 @@ namespace DiamondTests
         }
 
         [TestMethod]
-        public void ShouldReturnDiamond()
+        public void ShouldReturnDiamondForLetterD()
         {
             var sut = new DiamondGenerator();
-            var resut = sut.GetDiamond('A');
-
-            foreach (var item in resut)
-                Console.WriteLine(item);
+            var resut = sut.GetDiamond('D');
+            
+            
+            Assert.AreEqual("   A   ", resut[0]);
+            Assert.AreEqual("  B B  ", resut[1]);
+            Assert.AreEqual(" C   C ", resut[2]);
+            Assert.AreEqual("D     D", resut[3]);
+            Assert.AreEqual(" C   C ", resut[4]);
+            Assert.AreEqual("  B B  ", resut[5]);
+            Assert.AreEqual("   A   ", resut[6]);
 
         }
 

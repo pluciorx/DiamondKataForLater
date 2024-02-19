@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var input = args[0].ToUpper();
+            var input = args[0];
             var validator = new InputValidator();
             if (!validator.IsValidInput(input)) throw new ArgumentException("Invalid argument");
 

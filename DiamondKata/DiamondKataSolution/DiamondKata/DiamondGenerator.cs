@@ -13,7 +13,7 @@ namespace DiamondKata
         public List<string> GetDiamond(char c) 
         {
             var response = new List<string>();
-            int positionA = 65;
+            int positionA = char.IsLower(c)? 'a': 'A';
             int position = c;
             int diff = position - positionA;
             
@@ -22,12 +22,13 @@ namespace DiamondKata
                 response.Add("A");
                 return response; ;
             }
-            if (diff % 2 == 0) { diff = diff + 1; }
-            var middleLine = c + new string(' ', diff) + c;           
+            //if (diff % 2 == 0) { diff += 1; }
+            var spacing = (diff * 2) - 1;
+            var middleLine = c + new string(' ', spacing) + c;           
 
             var sb = new StringBuilder(middleLine+Environment.NewLine);
 
-            for (int i = 1; i < diff; i++)
+            for (int i = 1; i <= diff; i++)
             {                
                 var sb2 = new StringBuilder( new string(' ', middleLine.Length));
                 char letter = (char)(position - i);
@@ -39,7 +40,8 @@ namespace DiamondKata
                 sb.Insert(0, line + Environment.NewLine);
                 sb.Append(line + Environment.NewLine);                
             }
-            response = sb.ToString().TrimEnd().Split(Environment.NewLine).ToList();
+           
+            response = sb.ToString().Split(Environment.NewLine).Where(l=>!string.IsNullOrEmpty(l)).ToList();
             
             return response;  
         }
