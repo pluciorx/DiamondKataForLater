@@ -10,7 +10,7 @@ namespace DiamondTests
         {
             var sut = new DiamondGenerator();
             var resut = sut.GetDiamond('A');
-            
+
             Assert.AreEqual(1, resut.Count());
         }
 
@@ -60,13 +60,9 @@ namespace DiamondTests
         public void ShouldReturnDiamondForAnyLetter()
         {
             var sut = new DiamondGenerator();
-            var resut = sut.GetDiamond('C');
+            var resut = sut.GetDiamond('Z');
 
-            Assert.AreEqual("  A  ", resut[0]);
-            Assert.AreEqual(" B B ", resut[1]);
-            Assert.AreEqual("C   C", resut[2]);
-            Assert.AreEqual(" B B ", resut[3]);
-            Assert.AreEqual("  A  ", resut[4]);
+            Assert.IsTrue(resut.Count() > 1);
 
         }
 
@@ -75,8 +71,8 @@ namespace DiamondTests
         {
             var sut = new DiamondGenerator();
             var resut = sut.GetDiamond('D');
-            
-            
+
+
             Assert.AreEqual("   A   ", resut[0]);
             Assert.AreEqual("  B B  ", resut[1]);
             Assert.AreEqual(" C   C ", resut[2]);

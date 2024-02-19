@@ -22,7 +22,7 @@ namespace DiamondKata
                 response.Add("A");
                 return response; ;
             }
-            //if (diff % 2 == 0) { diff += 1; }
+            
             var spacing = (diff * 2) - 1;
             var middleLine = c + new string(' ', spacing) + c;           
 
