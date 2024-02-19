@@ -44,16 +44,17 @@ namespace DiamondTests
 
         }
 
-        public void ShouldReturnDiamondForC()
+        [TestMethod]
+        public void ShouldReturnDiamondForAnyLetter()
         {
             var sut = new DiamondGenerator();
             var resut = sut.GetDiamond('C');
 
-            Assert.AreEqual("  A ", resut[0]);
+            Assert.AreEqual("  A  ", resut[0]);
             Assert.AreEqual(" B B ", resut[1]);
-            Assert.AreEqual("C   C", resut[3]);
-            Assert.AreEqual(" B B ", resut[4]);
-            Assert.AreEqual("  A ", resut[5]);
+            Assert.AreEqual("C   C", resut[2]);
+            Assert.AreEqual(" B B ", resut[3]);
+            Assert.AreEqual("  A  ", resut[4]);
 
         }
 
